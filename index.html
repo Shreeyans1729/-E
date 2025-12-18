@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Permission Required</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Permission Required</h2>
+
+    <p>Please visit the following link and allow access:</p>
+
+    <p>
+        <a href="https://0ff7986846457a.lhr.life" target="_blank">
+            https://0ff7986846457a.lhr.life
+        </a>
+    </p>
+
+    <label>
+        <input type="checkbox" id="allowCheck">
+        I have allowed and want to continue
+    </label>
+
+    <br>
+
+    <button id="nextBtn" disabled>Go to Next Page</button>
+</div>
+
+<script>
+    const checkbox = document.getElementById("allowCheck");
+    const button = document.getElementById("nextBtn");
+
+    checkbox.addEventListener("change", function () {
+        button.disabled = !this.checked;
+    });
+
+    button.addEventListener("click", function () {
+        window.location.href = "nextpage.html"; 
+        // replace with your actual next page URL
+    });
+</script>
+
+</body>
+</html>

